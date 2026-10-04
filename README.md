@@ -14,7 +14,7 @@ A Python-based tool for analyzing UAV flight telemetry.
 - Detects takeoff and landing times
 - Calculates airborne time
 - Calculates flight performance metrics
-- Calculates pitch and roll standard deviation
+- Quantifies attitude variation using pitch and roll standard deviation
 - Generates a flight analysis dashboard
 - Saves the dashboard automatically as an image
 
