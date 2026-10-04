@@ -44,3 +44,7 @@ A Python-based tool for analyzing UAV flight telemetry.
 - Automated waypoint analysis
 - Compare commanded vs actual trajectory
 - Analyze real UAV stability and flight performance
+
+## Example Output
+
+![Flight Summary](plots/flight_summary.png)
