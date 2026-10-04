@@ -1,6 +1,8 @@
 # UAV Flight Data Analyzer
 
-A Python-based tool for analyzing UAV flight telemetry.
+A Python-based tool for analyzing UAV flight telemetry from CSV data.
+
+The analyzer processes time-series flight data, derives basic performance metrics, classifies flight phases, detects takeoff and landing events, quantifies attitude variation, and generates a flight-analysis dashboard.
 
 ## Features
 
@@ -15,10 +17,12 @@ A Python-based tool for analyzing UAV flight telemetry.
 - Calculates airborne time
 - Calculates flight performance metrics
 - Quantifies attitude variation using pitch and roll standard deviation
-- Generates a flight analysis dashboard
+- Generates a flight-analysis dashboard
 - Saves the dashboard automatically as an image
 
 ## Current Metrics
+
+The analyzer currently calculates:
 
 - Maximum altitude
 - Maximum airspeed
@@ -31,20 +35,40 @@ A Python-based tool for analyzing UAV flight telemetry.
 - Landing time
 - Airborne time
 
+## Sample Data
+
+The included `data/sample_flight.csv` file contains synthetic flight telemetry used to test and demonstrate the analyzer's functionality.
+
+The current dataset includes:
+
+- Time
+- Altitude
+- Airspeed
+- Pitch
+- Roll
+- Yaw
+- X-axis acceleration
+- Y-axis acceleration
+- Z-axis acceleration
+
+The current version is designed around CSV-formatted telemetry. Real ArduPilot flight-log support is planned as a future improvement.
+
 ## Technologies
 
 - Python
 - Pandas
 - Matplotlib
 
-## Future Improvements
+## Project Structure
 
-- Import real ArduPilot flight logs
-- GPS flight-path visualization
-- Automated waypoint analysis
-- Compare commanded vs actual trajectory
-- Analyze real UAV stability and flight performance
-
-## Example Output
-
-![Flight Summary](plots/flight_summary.png)
+```text
+uav-flight-data-analyzer/
+├── data/
+│   └── sample_flight.csv
+├── plots/
+│   └── flight_summary.png
+├── src/
+│   └── analyzer.py
+├── .gitignore
+├── README.md
+└── requirements.txt
