@@ -56,7 +56,7 @@ if takeoff_time is not None and landing_time is not None:
     airborne_time = landing_time - takeoff_time
     print("Airborne Time:", airborne_time, "s")
 
-print(data[["time", "altitude", "airspeed", "climb_rate", "flight_phase"]])
+
 
 
 # Create 4 stacked graphs
